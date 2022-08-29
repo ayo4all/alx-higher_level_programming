@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-def max_integer(my_list=[]):
-    if not my_list or len(my_list) == 0:
-        return None
-    return sorted(my_list)[-1]
+from operator import ne
+
+
+def divisible_by_2(my_list=[]):
+    if not my_list:
+        return
+    new_list = [n % 2 == 0 for n in my_list]
+
+    return new_list

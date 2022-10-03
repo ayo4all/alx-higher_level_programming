@@ -748,7 +748,7 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             r.update(height=-5)
 
-    def test_update_kwargs_inavlid_x_type(self):
+    def test_update_kwargs_invalid_x_type(self):
         r = Rectangle(10, 10, 10, 10, 10)
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r.update(x="invalid")
